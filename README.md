@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Movie Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movie Explorer is a React-based web application that allows users to explore movies, view details, and manage a personalized list of favorite movies. The app integrates with The Movie Database (TMDb) API to fetch movie data and Firebase for user authentication.
+
+## Features
+
+- **Discover Movies**: Browse movies by categories such as Now Playing, Popular, Top Rated, and Upcoming.
+- **Search and Filter**: Search for movies by title, filter by genre, and sort by rating, release year, or runtime.
+- **Movie Details**: View detailed information about a movie, including its cast, director, trailer, and similar movies.
+- **My List**: Add or remove movies from a personalized list stored in local storage.
+- **User Authentication**: Sign up and log in using Firebase Authentication.
+- **Dark Mode**: Toggle between light and dark themes.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd movie-explorer
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+- `src/`
+  - `App.js`: Main application component.
+  - `index.js`: Entry point of the application.
+  - `components/`: Reusable UI components like `Sidebar`, `MovieSection`, and `ThreeScene`.
+  - `pages/`: Page components for different routes such as `Home`, `MyList`, `MovieDetails`, and `Auth`.
+  - `firebaseConfig.js`: Firebase configuration and initialization.
+  - `App.css` and `index.css`: Global styles.
+- `public/`
+  - Static assets like `index.html`, `manifest.json`, and icons.
+
+## API Integration
+
+The app uses [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api) to fetch movie data. Replace the `apiKey` in the code with your own TMDb API key.
+
+## Firebase Setup
+
+1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/).
+2. Replace the `firebaseConfig` object in `src/firebaseConfig.js` with your Firebase project credentials.
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner.
+- `npm run build`: Builds the app for production.
 
-### `npm start`
+## Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Material-UI
+- Firebase
+- Axios
+- Framer Motion
+- React Router DOM
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## License
 
-### `npm test`
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
